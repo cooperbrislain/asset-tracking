@@ -1,4 +1,6 @@
 var config = require('config');
-//...
-var dbConfig = config.get('asset.dbConfig');
+var db = require('db')
+
+
+var dbConfig = config.get('config.db');
 db.connect(dbConfig);
