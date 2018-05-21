@@ -9,8 +9,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js">
-    </script>
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -18,7 +17,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <video id="preview"></video>
                     <form>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -34,6 +32,16 @@
                                 </label>
                             </div>
                             <input class="form-control qrcode-text" type="text" id="serial">
+                            <div class="input-group-append">
+                                <label class="btn btn-primary btn-lg btn-add">
+                                    +
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <ul id="serials-list">
+
+                            </ul>
                         </div>
                         <div class="form-group">
                             <button type="button" data-message="checked in" class="btn btn-primary btn-lg btn-block">Check In</button>

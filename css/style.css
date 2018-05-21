@@ -8,11 +8,15 @@
     top: 0.25em;
 }
 
-.qrcode-text-btn {
+label.btn {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+
+.input-group-prepend label.btn {
     background-color: #FFF;
     color: #007bff;
-    font-weight: bold;
-    margin-bottom: 0;
 }
 
 .qrcode-text-btn > input[type=file] {
@@ -46,6 +50,11 @@
 
 .btn-group-block>.btn {
     flex: 1;
+}
+
+.btn-add {
+    background-color: limegreen;
+    border-color: limegreen;
 }
 
 #serial {
