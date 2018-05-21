@@ -1,5 +1,5 @@
 body {
-    font-family: Proxima Nova;
+    font-family: Arial
 }
 
 .qrcode-text-btn .qr-icon{
@@ -59,6 +59,7 @@ label.btn {
 .btn-add {
     background-color: limegreen;
     border-color: limegreen;
+    font-family: Arial Black;
 }
 
 .btn-good.selected {
