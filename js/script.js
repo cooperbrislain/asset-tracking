@@ -31,6 +31,7 @@ $(document).ready(function() {
     });
 
     $('button[data-message], input[type="radio"]').on('click', function() {
+        $(this).siblings().removeClass('selected');
         $(this).addClass('selected');
 
         $.ajax({

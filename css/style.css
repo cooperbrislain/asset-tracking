@@ -1,3 +1,7 @@
+body {
+    font-family: Proxima Nova;
+}
+
 .qrcode-text-btn .qr-icon{
     background: url(../img/qr_icon.svg) 50% 50% no-repeat;
     cursor: pointer;
@@ -55,6 +59,16 @@ label.btn {
 .btn-add {
     background-color: limegreen;
     border-color: limegreen;
+}
+
+.btn-good.selected {
+    background-color: forestgreen;
+    border-color: darkgreen;
+}
+
+.btn-bad.selected {
+    background-color: red;
+    border-color: darkred;
 }
 
 #serial {
