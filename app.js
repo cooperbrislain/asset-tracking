@@ -4,14 +4,16 @@ var app = express()
 var mysql = require('mysql')
 
 var myConnection  = require('express-myconnection')
+var config = require('config');
 
-var config = require('./config')
+var dbConfig = config.get('config.asset');
+
 var dbOptions = {
-    host:      config.database.host,
-    asset:       config.database.asset,
-    password: config.database.password,
-    port:       config.database.port,
-    database: config.database.db
+    host:      dbConfig.db.host,
+    user:       dbConfig.db.user,
+    password: dbConfig.db.password,
+    port:       dbConfig.db.port,
+    database: dbConfig.db.database
 }
 
 app.use(myConnection(mysql, dbOptions, 'pool'))
