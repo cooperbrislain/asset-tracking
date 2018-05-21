@@ -5,7 +5,7 @@ var mysql = require('mysql')
 
 var myConnection  = require('express-myconnection')
 
-var config = require('.cfg/config')
+var config = require('./config')
 var dbOptions = {
     host:      config.database.host,
     asset:       config.database.asset,
