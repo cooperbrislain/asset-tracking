@@ -1,0 +1,61 @@
+.qrcode-text-btn .qr-icon{
+    background: url(../img/qr_icon.svg) 50% 50% no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    top: 0.25em;
+}
+
+.qrcode-text-btn {
+    background-color: #FFF;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.qrcode-text-btn > input[type=file] {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.qrcode-text {
+    padding-right: 1.7em;
+    margin-right: 0;
+    vertical-align: middle;
+}
+
+.qrcode-text + .qrcode-text-btn {
+    width: 1.7em;
+    margin-left: -1.7em;
+    vertical-align: middle;
+}
+
+.btn-red {
+    background-color: #F00;
+}
+
+.btn-group-block {
+    display: flex;
+    width: 100%;
+}
+
+.btn-group-block>.btn {
+    flex: 1;
+}
+
+#serial {
+}
+
+a, a: hover {
+    color: black;
+    text-decoration: none;
+}
+
+a: hover {
+    color: #00AAFF;
+}
