@@ -1,3 +1,102 @@
 <%- include layouts/header.ejs %>
 
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="qrcode-text-btn btn btn-primary btn-lg">
+                            <span class="qr-icon"></span>
+                            <input
+                                id="qr"
+                                type="file"
+                                accept="image/*"
+                                capture="environment"
+                                onchange="openQRCamera(this);"
+                                tabindex="-1">
+                        </label>
+                    </div>
+                    <input class="form-control qrcode-text" type="text" id="serial">
+                    <div class="input-group-append">
+                        <label class="btn btn-primary btn-lg btn-add">
+                            +
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <ul id="serials-list">
+
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <button type="button" data-message="checked in" class="btn btn-primary btn-lg btn-block">Check In</button>
+                </div>
+                <div class="accordion form-group" id="testing-accordion">
+                    <div class="card">
+                        <div class="card-header" id="testing-card-header">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#testing-card" aria-expanded="true" aria-controls="testing-card">
+                                <h2 class="mb-0">Testing</h2>
+                            </button>
+                        </div>
+                        <div id="testing-card" class="collapse" aria-labelledby="testing-card-header" data-parent="#testing-accordion">
+                            <div class="card-body">
+                                <h2>Input</h2>
+                                <div class="btn-group btn-group-lg btn-group-block btn-group-toggle" role="group" aria-label="Button group with nested dropdown" data-toggle="buttons">
+                                    <button type="button" class="btn btn-secondary btn-large btn-good" data-message="input tested good" >Good</button>
+                                    <button type="button" class="btn btn-secondary btn-large btn-bad" data-message="input tested bad" >Bad</button>
+                                </div>
+                            d    <h2>Strip</h2>
+                                <div class="btn-group btn-group-lg btn-group-block btn-group-toggle" role="group" aria-label="Button group with nested dropdown">
+                                    <button type="button" class="btn btn-secondary btn-large btn-good" data-message="leds tested good" >Good</button>
+                                    <button type="button" class="btn btn-secondary btn-large btn-bad" data-message="leds tested bad" >Bad</button>
+                                </div>
+                                <h2>Output</h2>
+                                <div class="btn-group btn-group-lg btn-group-block btn-group-toggle" role="group" aria-label="Button group with nested dropdown">
+                                    <button type="button" class="btn btn-secondary btn-large btn-good" data-message="output tested good" >Good</button>
+                                    <button type="button" class="btn btn-secondary btn-large btn-bad" data-message="output tested bad" >Bad</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Status
+                    </div>
+                    <div class="card-body">
+                        <div class="btn-group btn-group-lg btn-group-block" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-secondary btn-large btn-good" data-message="unit marked good" >Good</button>
+                            <button type="button" class="btn btn-secondary btn-large btn-bad" data-message="unit marked bad" >Bad</button>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="accordion form-group" id="progress-accordion">
+                    <div class="card">
+                        <div class="card-header" id="progress-card-header">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#progress-card" aria-expanded="false" aria-controls="progress-card">Progress
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="progress-card" class="collapse" aria-labelledby="testing-card-header" data-parent="#testing-accordion">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="unit started" >Begin</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="beam assembled" >Beam Assembled</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="power wires run" >Power Wires Run</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="connectors soldered" >Connectors Soldered</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="leds" >LEDs</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="end caps" >End Caps</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="power plugs" >Power Plugs</button>
+                                <button type="button" class="btn btn-secondary btn-large btn-block" data-message="unit complete" >Complete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <%- include layouts/footer.ejs %>
