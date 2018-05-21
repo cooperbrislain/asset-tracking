@@ -31,19 +31,24 @@ $(document).ready(function() {
     });
 
     $('button[data-message], input[type="radio"]').on('click', function() {
+        $(this).addClass('selected');
+
         $.ajax({
             url: 'https://hooks.zapier.com/hooks/catch/3118175/adg003/',
             method: 'POST',
             dataType: 'json',
             data:
                 {
-                    serials: items
-                    timestamp: Date.now(),
+                    serials: JSON.stringify(
+                        $('#serials-list li').map(function(i, elm) {
+                            return $(elm).text();
+                        }).get()),
+                    timestamp: JSON.stringify(Date.now()),
                     message: $(this).data('message')
                 }
         }).done(function(data) {
             console.log('sent!');
-            codnsole.log(data);
+            console.log(data);
         });
         return 0;
     });
