@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
 
     $('.btn-add').on('click', function() {
-        $('#serials-list').append($('<li>').text($('#serial').val()));
+        $('#serials-list').append($('<li class="list-group-item">').text($('#serial').val()));
         items.concat([$('#serial').val()]);
     });
 

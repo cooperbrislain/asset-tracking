@@ -4,31 +4,32 @@
     <div class="container">
         <div class="row">
             <form>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="qrcode-text-btn btn btn-primary btn-lg">
-                            <span class="qr-icon"></span>
-                            <input
-                                id="qr"
-                                type="file"
-                                accept="image/*"
-                                capture="environment"
-                                onchange="openQRCamera(this);"
-                                tabindex="-1">
-                        </label>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="input-group-prepend">
+                            <label class="qrcode-text-btn btn btn-primary btn-lg">
+                                <span class="qr-icon"></span>
+                                <input
+                                        id="qr"
+                                        type="file"
+                                        accept="image/*"
+                                        capture="environment"
+                                        onchange="openQRCamera(this);"
+                                        tabindex="-1">
+                            </label>
+                            <input class="form-control qrcode-text" type="text" id="serial">
+                            <div class="input-group-append">
+                                <label class="btn btn-primary btn-lg btn-add">
+                                    +
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <input class="form-control qrcode-text" type="text" id="serial">
-                    <div class="input-group-append">
-                        <label class="btn btn-primary btn-lg btn-add">
-                            +
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <ul id="serials-list">
 
+                    <ul id="serials-list" class="list-group list-group-flush"">
                     </ul>
                 </div>
+            </form>
                 <div class="form-group">
                     <button type="button" data-message="checked in" class="btn btn-primary btn-lg btn-block">Check In</button>
                 </div>
