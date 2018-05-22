@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 
-app.get('/', function(req, res, next) {
+app.get('/asset', function(req, res, next) {
     req.getConnection(function(error, conn) {
         conn.query('SELECT * FROM asset ORDER BY seriial DESC',function(err, rows, fields) {
             if (err) {
