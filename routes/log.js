@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.post('/add', function(req, res, next){
+app.post('/log', function(req, res, next){
     req.assert('serial', 'Serial is required').notEmpty();
     req.assert('message', 'Message is required').notEmpty();
 

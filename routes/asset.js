@@ -134,10 +134,7 @@ app.put('/asset/edit/(:serial)', function(req, res, next) {
 
         res.render('asset/edit', {
             title: 'Edit asset',
-            serial: req.params.serial,
-            name: req.body.name,
-            age: req.body.age,
-            email: req.body.email
+            serial: req.params.serial
         })
     }
 })
