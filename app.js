@@ -21,7 +21,7 @@ app.use(myConnection(mysql, dbOptions, 'pool'))
 app.set('view engine', 'ejs')
 
 var index = require('./routes/index')
-var assets = require('./routes/asset')
+var asset = require('./routes/asset')
 
 var expressValidator = require('express-validator')
 app.use(expressValidator())
@@ -56,7 +56,7 @@ app.use(flash())
 
 
 app.use('/', index)
-app.use('/assets', assets)
+app.use('/asset', asset)
 
 app.listen(3000, function(){
     console.log('Server running at port 3000: http://127.0.0.1:3000')
