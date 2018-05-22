@@ -6,23 +6,25 @@
             <form>
                 <div class="card">
                     <div class="card-header">
-                        <div class="input-group-prepend">
-                            <label class="qrcode-text-btn btn btn-primary btn-lg">
-                                <span class="qr-icon"></span>
-                                <input
-                                        id="qr"
-                                        type="file"
-                                        accept="image/*"
-                                        capture="environment"
-                                        onchange="openQRCamera(this);"
-                                        tabindex="-1">
-                            </label>
-                        </div>
-                        <input class="form-control qrcode-text" type="text" id="serial">
-                        <div class="input-group-append">
-                            <label class="btn btn-primary btn-lg btn-add">
-                                +
-                            </label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="qrcode-text-btn btn btn-primary btn-lg">
+                                    <span class="qr-icon"></span>
+                                    <input
+                                            id="qr"
+                                            type="file"
+                                            accept="image/*"
+                                            capture="environment"
+                                            onchange="openQRCamera(this);"
+                                            tabindex="-1">
+                                </label>
+                            </div>
+                            <input class="form-control qrcode-text" type="text" id="serial">
+                            <div class="input-group-append">
+                                <label class="btn btn-primary btn-lg btn-add">
+                                    +
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">"
