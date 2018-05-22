@@ -20,21 +20,21 @@ app.get('/', function(req, res, next) {
     })
 })
 
-app.get('asset/checkin/(:serial)', function(req, res, next) {
+app.get('/asset/checkin/(:serial)', function(req, res, next) {
     res.render('asset/checkin', {
         title: 'Check In',
         serial: req.body.serial
     });
 });
 
-app.get('asset/add', function(req, res, next){
+app.get('/asset/add', function(req, res, next){
     res.render('asset/add', {
         title: 'Add New asset',
         serial:  ''
     })
 })
 
-app.post('asset/add', function(req, res, next){
+app.post('/asset/add', function(req, res, next){
     req.assert('serial', 'Serial is required').notEmpty()
 
 
@@ -79,7 +79,7 @@ app.post('asset/add', function(req, res, next){
     }
 })
 
-app.get('asset/edit/(:serial)', function(req, res, next){
+app.get('/asset/edit/(:serial)', function(req, res, next){
     req.getConnection(function(error, conn) {
         conn.query('SELECT * FROM asset WHERE serial = ' + req.params.serial, function(err, rows, fields) {
             if(err) throw err
