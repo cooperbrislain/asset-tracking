@@ -17,22 +17,23 @@
                                         onchange="openQRCamera(this);"
                                         tabindex="-1">
                             </label>
-                            <input class="form-control qrcode-text" type="text" id="serial">
-                            <div class="input-group-append">
-                                <label class="btn btn-primary btn-lg btn-add">
-                                    +
-                                </label>
-                            </div>
+                        </div>
+                        <input class="form-control qrcode-text" type="text" id="serial">
+                        <div class="input-group-append">
+                            <label class="btn btn-primary btn-lg btn-add">
+                                +
+                            </label>
                         </div>
                     </div>
-
-                    <ul id="serials-list" class="list-group list-group-flush"">
-                    </ul>
+                    <div class="card-body">"
+                        <ul id="serials-list" class="list-group list-group-flush"">
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" data-message="checked in" class="btn btn-primary btn-lg btn-block">Check In</button>
+                    </div>
                 </div>
             </form>
-                <div class="form-group">
-                    <button type="button" data-message="checked in" class="btn btn-primary btn-lg btn-block">Check In</button>
-                </div>
                 <div class="accordion form-group" id="testing-accordion">
                     <div class="card">
                         <div class="card-header" id="testing-card-header">
