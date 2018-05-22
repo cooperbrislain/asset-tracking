@@ -42,6 +42,22 @@ app.post('/log', function(req, res, next){
             title: 'Add new log entry'
         })
     }
-})
+});
+
+app.get('/log', function(req, res, next) {
+    req.getConnection(function(error, conn) {
+        conn.query('SELECT * FROM log', function(err, result) {
+            if (err) {
+                req.flash('error', err);
+            } else {
+                req.flash('success', 'Got Logs!');
+
+                res.render('log', {
+                    title: 'Add new log entry',
+                })
+            }
+        })
+    })
+});
 
 module.exports = app
