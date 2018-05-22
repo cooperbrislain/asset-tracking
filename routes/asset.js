@@ -21,14 +21,14 @@ app.get('/', function(req, res, next) {
 })
 
 app.get('/asset/checkin/(:serial)', function(req, res, next) {
-    res.render('asset/checkin', {
+    res.render('/asset/checkin', {
         title: 'Check In',
-        serial: req.body.serial
+        serial: req.params.serial
     });
 });
 
 app.get('/asset/add', function(req, res, next){
-    res.render('asset/add', {
+    res.render('/asset/add', {
         title: 'Add New asset',
         serial:  ''
     })
