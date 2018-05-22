@@ -28,7 +28,7 @@ app.get('/asset/checkin/(:serial)', function(req, res, next) {
 });
 
 app.get('/asset/add', function(req, res, next){
-    res.render('/asset/add', {
+    res.render('asset/add', {
         title: 'Add New asset',
         serial:  ''
     })
